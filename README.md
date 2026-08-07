@@ -177,7 +177,7 @@ __Response__
 
 Example Request
 
-```{
+`{
     "gender":"Female",
     "seniorcitizen":0,
     "partner":"Yes",
@@ -197,7 +197,7 @@ Example Request
     "paymentmethod":"Electronic check",
     "monthlycharges":79.85,
     "totalcharges":920.45
-}```
+}`
 
 Example Response
 
