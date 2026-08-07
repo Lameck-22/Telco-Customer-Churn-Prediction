@@ -8,3 +8,22 @@ The project covers the complete machine learning lifecycle including:
 - Model training and evaluation
 - Model serialization
 - REST API deployment using FastAPI
+
+## Project Structure
+telco-churn-prediction/
+│
+├── api/
+│   └── main.py                # FastAPI application
+│
+├── data/
+│   └── telco_churn.csv        # Dataset
+│
+├── models/
+│   ├── ml_pipeline.joblib     # Trained machine learning pipeline
+│   └── target_labels.joblib   # LabelEncoder for target decoding
+│
+├── notebooks/
+│   └── project.ipynb          # Data analysis and model development
+│
+├── README.md
+└── .gitignore
