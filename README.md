@@ -204,3 +204,49 @@ Example Response
 `{
     "prediction":"Yes"
 }`
+
+### Running the Project
+__clone the repository__
+`git clone https://github.com/yourusername/telco-churn-prediction.git`
+
+### Create Virtual Environment
+windows
+`python -m venv venv`
+activate
+`venv\Scripts\activate`
+
+install dependencies
+`pip install -r requirements.txt`
+
+## Running the API
+Navigate to the API folder.
+`cd api`
+Run:
+`uvicorn main:app --reload`
+OR
+`uvicorn main:app --reload --host 127.0.0.1 --port 8000`
+
+Open the Swagger documentation:
+`http://127.0.0.1:8000/docs`
+
+### Technology used
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Joblib
+- FastAPI
+- Pydantic
+- Uvicorn
+
+### Future Improvements
+- Hyperparameter tuning using GridSearchCV
+- Cross-validation
+- Feature importance visualization
+- Model monitoring
+- Docker containerization
+- CI/CD pipeline
+- Cloud deployment (Azure, AWS, or Google Cloud)
+- Interactive frontend using Streamlit or React
