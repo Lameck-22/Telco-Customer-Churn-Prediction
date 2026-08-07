@@ -72,14 +72,14 @@ Initial exploration includes:
 ### 4. Data Cleaning
 The notebook performs several preprocessing tasks including:
 
-Standardizing column names
-Convert column names to lowercase
-Remove leading/trailing whitespace
-Type conversion
-TotalCharges
-Converted from string to floating-point values.
-Missing values
-Rows containing missing values are cleaned before model training.
+- Standardizing column names
+- Convert column names to lowercase
+- Remove leading/trailing whitespace
+- Type conversion
+- TotalCharges
+- Converted from string to floating-point values.
+- Missing values
+- Rows containing missing values are cleaned before model training.
 
 ### 5. Feature Engineering
 Features are separated into:
@@ -177,7 +177,7 @@ __Response__
 
 Example Request
 
-`{
+```{
     "gender":"Female",
     "seniorcitizen":0,
     "partner":"Yes",
@@ -197,7 +197,7 @@ Example Request
     "paymentmethod":"Electronic check",
     "monthlycharges":79.85,
     "totalcharges":920.45
-}`
+}```
 
 Example Response
 
