@@ -129,18 +129,78 @@ The pipelines are combined using a ColumnTransformer.
 Three classification algorithms were trained and evaluated.
 
 #### Logistic Regression
-'''LogisticRegression(max_iter=1000)'''
+`LogisticRegression(max_iter=1000)`
 
 #### K-Nearest Neighbors
-'''KNeighborsClassifier(
+`KNeighborsClassifier(
     n_neighbors=7,
     metric='euclidean'
-)'''
+)`
 
 #### Random Forest
-'''RandomForestClassifier(
+`RandomForestClassifier(
     n_estimators=1000,
     max_depth=10
-)'''
+)`
+
+### 8. Model Evaluation
+Each model is evaluated using:
+
+- Classification Report
+- Precision
+- Recall
+- F1-Score
+After comparison, the best-performing model is selected for deployment.
+
+### Model Serialization
+The trained model is saved using Joblib.
+`joblib.dump(full_pipeline,"../models/ml_pipeline.joblib")`
+
+The target encoder is also saved:
+`joblib.dump(le,"../models/target_labels.joblib")`
 
 
+
+## FastAPI Deployment
+The project exposes the trained model as a REST API.
+
+#### Health Check
+`GET /health`
+
+__Response__
+`{
+    "status": "API is running successfully"
+}`
+
+#### Prediction Endpoint
+`POST /predict`
+
+Example Request
+
+`{
+    "gender":"Female",
+    "seniorcitizen":0,
+    "partner":"Yes",
+    "dependents":"No",
+    "tenure":12,
+    "phoneservice":"Yes",
+    "multiplelines":"No",
+    "internetservice":"Fiber optic",
+    "onlinesecurity":"No",
+    "onlinebackup":"Yes",
+    "deviceprotection":"No",
+    "techsupport":"No",
+    "streamingtv":"Yes",
+    "streamingmovies":"Yes",
+    "contract":"Month-to-month",
+    "paperlessbilling":"Yes",
+    "paymentmethod":"Electronic check",
+    "monthlycharges":79.85,
+    "totalcharges":920.45
+}`
+
+Example Response
+
+`{
+    "prediction":"Yes"
+}`
