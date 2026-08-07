@@ -36,7 +36,97 @@ Gender
 - Payment Method
 - Monthly Charges
 - Total Charges
-  
-  Target Variable
+
+Target Variable
 
 Churn
+Possible values:
+
+- Yes
+- No
+
+## Machine Learning Workflow
+
+### 1. Import Libraries
+The project utilizes:
+
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Joblib
+
+### 2. Load Dataset
+The dataset is loaded into a Pandas DataFrame for preprocessing and analysis.
+
+### 3. Exploratory Data Analysis (EDA)
+Initial exploration includes:
+
+- Dataset inspection
+- Feature distributions
+- Missing value identification
+- Target class distribution
+- Data types 
+
+### 4. Data Cleaning
+The notebook performs several preprocessing tasks including:
+
+Standardizing column names
+Convert column names to lowercase
+Remove leading/trailing whitespace
+Type conversion
+TotalCharges
+Converted from string to floating-point values.
+Missing values
+Rows containing missing values are cleaned before model training.
+
+### 5. Feature Engineering
+Features are separated into:
+
+__Numerical Features__
+tenure
+monthlycharges
+totalcharges
+
+__Categorical Features__
+gender
+seniorcitizen
+partner
+dependents
+phoneservice
+multiplelines
+internetservice
+onlinesecurity
+onlinebackup
+deviceprotection
+techsupport
+streamingtv
+streamingmovies
+contract
+paperlessbilling
+paymentmethod
+
+### 6. Train-Test Split
+The dataset is split into training and testing sets using:
+
+- 80% Training
+- 20% Testing
+Stratified sampling is used to preserve the class distribution
+
+### 7. Data Preprocessing Pipeline
+The project uses Scikit-learn Pipelines for reproducible preprocessing.
+
+__Numerical Pipeline__
+StandardScaler
+
+__Categorical Pipeline__
+OneHotEncoder
+handle_unknown='ignore'
+The pipelines are combined using a ColumnTransformer.
+
+### 7. Models Evaluated
+Three classification algorithms were trained and evaluated.
+
+#### Logistic Regression
+'''LogisticRegression(max_iter=1000)'''
