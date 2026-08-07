@@ -130,3 +130,17 @@ Three classification algorithms were trained and evaluated.
 
 #### Logistic Regression
 '''LogisticRegression(max_iter=1000)'''
+
+#### K-Nearest Neighbors
+'''KNeighborsClassifier(
+    n_neighbors=7,
+    metric='euclidean'
+)'''
+
+#### Random Forest
+'''RandomForestClassifier(
+    n_estimators=1000,
+    max_depth=10
+)'''
+
+
