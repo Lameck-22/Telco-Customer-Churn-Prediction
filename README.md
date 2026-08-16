@@ -10,7 +10,7 @@ The project covers the complete machine learning lifecycle including:
 - REST API deployment using FastAPI
 
 ## Project Structure
-'''
+```
 telco-churn-prediction/
 │
 ├── api/
@@ -28,7 +28,7 @@ telco-churn-prediction/
 │
 ├── README.md
 └── .gitignore
-'''
+```
 
 ## Project Overview
 Customer churn is one of the most important business metrics for subscription-based businesses. Predicting which customers are likely to leave enables organizations to take proactive retention measures.
